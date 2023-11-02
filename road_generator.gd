@@ -5,13 +5,8 @@ var RoadBlocks = {}
 var type = ['road']
 var part_instances = []
 var part_free_queue = []
-var obstacle_scenes = {}
-var obstacle_layouts = {}
-var left_turn_counter = 0
-var right_turn_counter = 0
-var intersection_counter = 0
-var spawn_part_counter = 0
 var part
+var randomizer = 0
 # Called when the node enters the scene tree for the first time.
 
 var terrain_belt: Array[MeshInstance3D] = []
@@ -21,37 +16,39 @@ var terrain_vel = 0
 	
 func _ready() -> void:
 	_load_terrain_scenes(terrain_blocks_path)
-	_road_to_right(terrain_blocks)	
-		
+	_initial_road(terrain_blocks)
+
 func _physics_process(delta: float) -> void:
 	_progress_terrain(delta, part)
+	print(terrain_vel)
 	pass
 
-func spawn_next_part(index):	
-	randomize()
-	var part = RoadBlocks[type[0]][randi()%RoadBlocks[type[0]].size()]
-	match part.type:
-		"lturn":
-			if left_turn_counter > 0 or index < 4:
-				return spawn_next_part(index)
-			left_turn_counter +=1
-		"rturn":
-			if right_turn_counter > 0 or index < 4:
-				return spawn_next_part(index)
-			right_turn_counter +=1
-		"intersectA":
-			if intersection_counter > 0 or index < 4:
-				return spawn_next_part(index)
-			intersection_counter +=1
+func randomize_road():
+	match randomizer:
+		11:
+			randomizer = 0
+			return RoadBlocks[type[0]][RoadBlocks[type[0]].size()-2]
+		12:
+			randomizer = 0
+			return RoadBlocks[type[0]][RoadBlocks[type[0]].size()-3]
+		13:
+			randomizer = 0
+			return RoadBlocks[type[0]][RoadBlocks[type[0]].size()-4]
+		_:
+			randomizer += randi_range(1, 3)
+			print(randomizer)
+			return RoadBlocks[type[0]][RoadBlocks[type[0]].size()-1]
+	
 
 func _progress_terrain(delta: float, part) -> void:
+
 	for block in terrain_belt:
 		block.position.z += terrain_vel * delta
-
 	if terrain_belt[0].position.z >= terrain_belt[0].mesh.size.y/2:
 		var last_terrain = terrain_belt[-1]
 		var first_terrain = terrain_belt.pop_front()
-		var block = load(part.file).instantiate()
+		var block = load(randomize_road().file).instantiate()
+		#match block:
 		_append_to_far_edge(last_terrain, block)
 		add_child(block)
 		terrain_belt.append(block)
@@ -91,7 +88,6 @@ func _initial_road(blocks):
 	part = RoadBlocks[type[0]][RoadBlocks[type[0]].size()-1]
 	for block_index in blocks:
 		var block = load(part.file).instantiate()
-		print(block)
 		if block_index == 0:
 			block.position.z = block.mesh.size.y/2
 		else:
@@ -100,23 +96,5 @@ func _initial_road(blocks):
 		terrain_belt.append(block)
 	return part
 
-func _road_to_right(blocks):
-
-	#terrain_belt = []
-	part = RoadBlocks[type[0]][RoadBlocks[type[0]].size()-1]
-	for i in blocks:
-		terrain_belt.append("")
-	terrain_belt.append(load( RoadBlocks[type[0]][RoadBlocks[type[0]].size()-2].file).instantiate())
-	for block_index in blocks:
-		var block = load(part.file).instantiate()
-		if block_index == 0:
-			block.position.z = block.mesh.size.y/2
-		else:
-			_append_to_far_edge(terrain_belt[block_index-1], block)
-			print(terrain_belt)
-		add_child(block)
-		terrain_belt.push_front(block)
-	return part
-
-func _on_v_box_container_speed_changed(speed):
+func _on_control_speed_changed(speed):
 	terrain_vel = speed

@@ -1,0 +1,61 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1698913061
+BestTease-6rAq.ttf::FontFile::7141760924336140954::1698912147::1698912584::1::::<><>::
+bg_try.jpg::CompressedTexture2D::992328148899714326::1698912147::1698912585::1::::<><>::
+button (1).png::CompressedTexture2D::8505687784171073000::1698912147::1698912584::1::::<><>::
+button (2).png::CompressedTexture2D::8258668747669990863::1698912147::1698912584::1::::<><>::
+button (3).png::CompressedTexture2D::3077573859639485699::1698912147::1698912585::1::::<><>::
+button (4).png::CompressedTexture2D::674156784358061456::1698912147::1698912584::1::::<><>::
+button (5).png::CompressedTexture2D::7201200110345168942::1698912147::1698912584::1::::<><>::
+button (6).png::CompressedTexture2D::7004609699565500771::1698912147::1698912584::1::::<><>::
+button (7).png::CompressedTexture2D::4975525680067079234::1698912147::1698912584::1::::<><>::
+button (8).png::CompressedTexture2D::6285925848835768511::1698912147::1698912584::1::::<><>::
+button (9).png::CompressedTexture2D::1300274564614152090::1698912147::1698912584::1::::<><>::
+button (11).png::CompressedTexture2D::4618627122842390165::1698912147::1698912584::1::::<><>::
+button (12).png::CompressedTexture2D::4371970684577858824::1698912147::1698912584::1::::<><>::
+button.png::CompressedTexture2D::2942831811916353783::1698912147::1698912584::1::::<><>::
+CarLock-lawX.ttf::FontFile::369894000152569832::1698912147::1698912584::1::::<><>::
+JdCodeRegular-A8Pg.ttf::FontFile::8060118482172529387::1698912147::1698912584::1::::<><>::
+Move_the_Car.gd::GDScript::-1::1698912147::0::1::::<>VehicleBody3D<>::
+road_generator.gd::GDScript::-1::1698912901::0::1::::TerrainController<>Node3D<>::
+road_generator.tscn::PackedScene::7104974958239238356::1698912903::0::1::::<><>::res://road_generator.gd
+Torus.gd::GDScript::-1::1698912147::0::1::::<>MeshInstance3D<>::
+wheel.gd::GDScript::-1::1698912147::0::1::::<>RefCounted<>::
+::res://main_game/::1698912903
+Accelerate.gd::GDScript::-1::1698912147::0::1::::<>Node<>::
+Car.glb::PackedScene::247395630509479959::1698912147::1698912585::1::::<><>::
+car_move.tscn::PackedScene::7839815007450279355::1698912410::0::1::::<><>::res://Move_the_Car.gd<>res://Torus.gd<>res://main_game/Control.gd<>uid://fjgdn06ebj4c::::res://CarLock-lawX.ttf<>res://main_game/HeartPy.gd<>res://main_game/Accelerate.gd
+Compile.gd::GDScript::-1::1698912147::0::1::::<>Node3D<>::
+Control.gd::GDScript::-1::1698912147::0::1::::<>Node<>::
+Glue.gd::GDScript::-1::1698912147::0::1::::<>Node3D<>::
+Heart Rate.gd::GDScript::-1::1698912147::0::1::::<>Label<>::
+HeartPy.gd::GDScript::-1::1698912147::0::1::::<>Node<>::
+Interface.gd::GDScript::-1::1698912147::0::1::::<>VBoxContainer<>::
+main_game.tscn::PackedScene::216935011354996307::1698912903::0::1::::<><>::res://main_game/World.gd<>uid://c8hx5t3o022ng::::res://road_generator.tscn<>uid://djxwuwtpo3teh::::res://main_game/car_move.tscn
+Midterm.gd::GDScript::-1::1698912147::0::1::::<>Control<>::
+Move_the_Car.gd::GDScript::-1::1698912147::0::1::::<>VehicleBody3D<>::
+move_the_car.tscn::PackedScene::6004801409988721447::1698912147::0::1::::<><>::
+sample_car.png::CompressedTexture2D::6885216867885034864::1698912147::1698912585::1::::<><>::
+speed.gd::GDScript::-1::1698912147::0::1::::<>Label<>::
+World.gd::GDScript::-1::1698912147::0::1::::<>Node3D<>::
+world.gdshader::Shader::-1::1698912147::0::1::::<><>::
+::res://main_game/__pycache__/::1698912147
+::res://main_menu/::1698912903
+background.png::CompressedTexture2D::7606312792750014756::1698912147::1698912585::1::::<><>::
+button_quit.png::CompressedTexture2D::5137939935818720471::1698912147::1698912585::1::::<><>::
+button_quit_clicked.png::CompressedTexture2D::7658708789572464634::1698912147::1698912585::1::::<><>::
+button_start.png::CompressedTexture2D::8209807179289185756::1698912147::1698912585::1::::<><>::
+button_start_clicked.png::CompressedTexture2D::4031656370962807559::1698912147::1698912585::1::::<><>::
+main_menu.tscn::PackedScene::4579537898390920712::1698912903::0::1::::<><>::uid://daukyjbu4we0m::::res://button (5).png<>uid://cvs7jscxg5n72::::res://button (8).png<>uid://bj32gr0weh3p4::::res://button (3).png<>uid://c62c5srmic0bn::::res://button (6).png<>res://main_menu/start.gd<>uid://juti75fbxpsi::::res://button (4).png<>uid://cc5ggfix7axw1::::res://button (7).png
+start.gd::GDScript::-1::1698912147::0::1::::<>TextureButton<>::
+title.png::CompressedTexture2D::443645807067862218::1698912147::1698912585::1::::<><>::
+::res://road_tiles/::1698912147
+road_intersect_0.tscn::PackedScene::2569377130195621295::1698912147::0::1::::<><>::uid://dw47yq8iedddt::::res://textures/intersection.png
+road_lturn_0.tscn::PackedScene::933464867261053488::1698912147::0::1::::<><>::uid://bes4o8atmx68e::::res://textures/road_left.png
+road_rturn_0.tscn::PackedScene::6574105684776693568::1698912147::0::1::::<><>::uid://ddnllsvkbxqg4::::res://textures/road_right.png
+road_straight_0.tscn::PackedScene::5488073217743280812::1698912147::0::1::::<><>::uid://b2jkuyabbi4wd::::res://textures/roadboi.png
+::res://textures/::1698913061
+intersection.png::CompressedTexture2D::8765270260527091741::1698414350::1698913065::1::::<><>::
+roadboi.png::CompressedTexture2D::4300743008119799891::1698414350::1698913065::1::::<><>::
+road_left.png::CompressedTexture2D::2706122385874007354::1698414350::1698913065::1::::<><>::
+road_right.png::CompressedTexture2D::7397354001767370993::1698414350::1698913065::1::::<><>::
