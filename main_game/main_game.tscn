@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://ddc5gpxod2j4"]
+[gd_scene load_steps=10 format=3 uid="uid://ddc5gpxod2j4"]
 
 [ext_resource type="Script" path="res://main_game/World.gd" id="1_7axet"]
 [ext_resource type="PackedScene" uid="uid://c8hx5t3o022ng" path="res://road_generator.tscn" id="2_yho0j"]
+[ext_resource type="Script" path="res://main_game/Control.gd" id="4_d8ave"]
+[ext_resource type="FontFile" uid="uid://fjgdn06ebj4c" path="res://CarLock-lawX.ttf" id="5_harwm"]
 [ext_resource type="PackedScene" uid="uid://djxwuwtpo3teh" path="res://main_game/car_move.tscn" id="5_uy6u3"]
-[ext_resource type="PackedScene" uid="uid://bioybd2wq80i4" path="res://large_building.tscn" id="6_or1ul"]
+[ext_resource type="Script" path="res://main_game/HeartPy.gd" id="6_8v0n0"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_yulgn"]
 
@@ -17,8 +19,6 @@ sky = SubResource("Sky_wr544")
 ambient_light_source = 3
 ambient_light_color = Color(0.423529, 0.698039, 0.941176, 1)
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h6pu3"]
-
 [node name="MainGame" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.473111, 0.907378, -0.306388)
 script = ExtResource("1_7axet")
@@ -26,25 +26,99 @@ script = ExtResource("1_7axet")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_sjway")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, 0)
-shape = SubResource("CapsuleShape3D_h6pu3")
-
-[node name="Camera3D" type="Camera3D" parent="StaticBody3D/CollisionShape3D"]
-transform = Transform3D(-0.207912, 0, -0.978148, 0, 1, 0, 0.978148, 0, -0.207912, 1, 1, 1)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.518971, 4.23316, 0)
-
-[node name="Timer" type="Timer" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.518971, 330.308, 0)
 
 [node name="road_generator" parent="." instance=ExtResource("2_yho0j")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
 
 [node name="Car" parent="." instance=ExtResource("5_uy6u3")]
-transform = Transform3D(0.94422, 0.0986345, -0.314195, -0.101597, 0.994802, 0.00697628, 0.31325, 0.0253341, 0.949333, 4, 15, -4)
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, 4, 148.319, -4)
 inertia = Vector3(363.64, 261.36, 420.45)
 
-[node name="Large Building" parent="." instance=ExtResource("6_or1ul")]
-transform = Transform3D(39.7414, 0, 4.5413, 0, 40, 0, -4.5413, 0, 39.7414, -5, -80, -90)
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("4_d8ave")
+
+[node name="Distance" type="Label" parent="Control"]
+layout_mode = 2
+offset_left = 318.0
+offset_top = 15.0
+offset_right = 555.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 0.647059, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Distance
+"
+
+[node name="DistanceValue" type="Label" parent="Control/Distance"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 7.0
+offset_right = 313.0
+offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("5_harwm")
+theme_override_font_sizes/font_size = 25
+
+[node name="Speed" type="Label" parent="Control"]
+layout_mode = 2
+offset_left = 36.0
+offset_top = 15.0
+offset_right = 273.0
+offset_bottom = 60.0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0.647059, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Speed"
+
+[node name="SpeedValue" type="Label" parent="Control/Speed"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 6.0
+offset_right = 352.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("5_harwm")
+theme_override_font_sizes/font_size = 25
+
+[node name="Timer" type="Timer" parent="Control"]
+
+[node name="Button" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 1044.0
+offset_top = 3.0
+offset_right = 1108.0
+offset_bottom = 67.0
+action_mode = 0
+button_mask = 0
+
+[node name="HeartPy" type="Node" parent="."]
+script = ExtResource("6_8v0n0")
+
+[node name="Heart" type="Label" parent="HeartPy"]
+offset_left = 638.0
+offset_top = 18.0
+offset_right = 817.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(1, 0.647059, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Heart Rate
+"
+
+[node name="HeartValue" type="Label" parent="HeartPy/Heart"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.562
+anchor_top = 0.633
+anchor_right = 1.562
+anchor_bottom = 1.0
+offset_left = -78.598
+offset_top = -22.485
+offset_right = 163.402
+offset_bottom = 6.0
+theme_override_fonts/font = ExtResource("5_harwm")
+theme_override_font_sizes/font_size = 25
+
+[node name="Timer" type="Timer" parent="HeartPy"]
+
+[connection signal="speed_changed" from="Control" to="road_generator" method="_on_control_speed_changed"]
