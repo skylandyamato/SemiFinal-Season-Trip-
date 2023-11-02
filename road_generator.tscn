@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8hx5t3o022ng"]
+
+[ext_resource type="Script" path="res://road_generator.gd" id="1_vhrap"]
+
+[node name="road_generator" type="Node3D"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -5, -80, -90)
+script = ExtResource("1_vhrap")
