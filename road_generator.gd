@@ -10,7 +10,7 @@ var randomizer = 0
 # Called when the node enters the scene tree for the first time.
 
 var terrain_belt: Array[MeshInstance3D] = []
-var terrain_vel = 0
+var terrain_vel = 10
 @export var terrain_blocks = randi_range(3, 6)
 @export_dir var terrain_blocks_path = "res://road_tiles"
 	
@@ -20,23 +20,25 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	_progress_terrain(delta, part)
-	print(terrain_vel)
 	pass
 
 func randomize_road():
 	match randomizer:
 		11:
 			randomizer = 0
+			print("Spawned Right")
 			return RoadBlocks[type[0]][RoadBlocks[type[0]].size()-2]
 		12:
 			randomizer = 0
+			print("Spawned Left")
 			return RoadBlocks[type[0]][RoadBlocks[type[0]].size()-3]
 		13:
 			randomizer = 0
+			print("Spawned Intersect")
 			return RoadBlocks[type[0]][RoadBlocks[type[0]].size()-4]
 		_:
 			randomizer += randi_range(1, 3)
-			print(randomizer)
+			print("Spawned Straight")
 			return RoadBlocks[type[0]][RoadBlocks[type[0]].size()-1]
 	
 
@@ -57,10 +59,12 @@ func _progress_terrain(delta: float, part) -> void:
 
 func _append_to_far_edge(target_block: MeshInstance3D, appending_block: MeshInstance3D) -> void:
 	appending_block.position.z = target_block.position.z - target_block.mesh.size.y/2 - appending_block.mesh.size.y/2
+	print(appending_block.position)
+	print(target_block.position)
+	print(target_block.position.z - target_block.mesh.size.y/2 - appending_block.mesh.size.y/2)
+	
 	#appending_block.rotate_z(randi())
 	#Reminder: pos x & 2 + = right; pos x & 2 - = left
-	#Reminder: build chunks from the mesh or smth then rotate it when needed
-	#search how to turn multiple meshes into one whole
 	
 func _load_terrain_scenes(target_path: String) -> void:
 	var dir = DirAccess.open(target_path)
@@ -97,4 +101,5 @@ func _initial_road(blocks):
 	return part
 
 func _on_control_speed_changed(speed):
-	terrain_vel = speed
+	pass
+	#terrain_vel = speed * 5

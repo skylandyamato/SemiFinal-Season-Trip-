@@ -1,7 +1,7 @@
 extends VehicleBody3D
 
 const MAX_SPEED = 100
-const ENGINE_POWER = 300
+const ENGINE_POWER = 200
 const MAX_TURN_SPEED = 0.5
 const TURN_ACCELERATION = 1.0
 

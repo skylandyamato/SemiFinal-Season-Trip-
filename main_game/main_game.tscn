@@ -33,7 +33,7 @@ transform = Transform3D(1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
 
 [node name="Car" parent="." instance=ExtResource("5_uy6u3")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, 4, 148.319, -4)
+transform = Transform3D(-0.00897098, -1.02446e-08, 0.99996, -0.45156, 0.892232, -0.00405109, -0.892195, -0.451579, -0.0080042, 0, 25.5216, -11.0601)
 inertia = Vector3(363.64, 261.36, 420.45)
 
 [node name="Control" type="Control" parent="."]
