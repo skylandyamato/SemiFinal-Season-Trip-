@@ -6,7 +6,7 @@
 albedo_texture = ExtResource("1_ml4me")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_f55eg"]
-size = Vector2(15, 15)
+size = Vector2(30, 30)
 
 [node name="road_intersect_0" type="MeshInstance3D"]
 material_override = SubResource("StandardMaterial3D_rqofp")

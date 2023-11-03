@@ -6,9 +6,8 @@
 albedo_texture = ExtResource("1_tw3yv")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_dejxb"]
-size = Vector2(15, 15)
+size = Vector2(30, 30)
 
 [node name="road_straight_0" type="MeshInstance3D"]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_lgxb2")
 mesh = SubResource("PlaneMesh_dejxb")
