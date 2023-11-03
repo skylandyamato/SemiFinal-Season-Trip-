@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://di8nk6ya3qrgj"
+path="res://.godot/imported/road_sideExit.obj-f3fba636cb9a63d999f7e6ef3e479bae.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_sideExit.obj-f3fba636cb9a63d999f7e6ef3e479bae.mesh"]
+
+source_file="res://Drive_Bg/Models/Roads OBJ format/road_sideExit.obj"
+dest_files=["res://.godot/imported/road_sideExit.obj-f3fba636cb9a63d999f7e6ef3e479bae.mesh", "res://.godot/imported/road_sideExit.obj-f3fba636cb9a63d999f7e6ef3e479bae.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c75cpogaq3y6h"
+path="res://.godot/imported/wall_doorA.obj-c6248d9dc5e8d2ecf586db72fdeed7db.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall_doorA.obj-c6248d9dc5e8d2ecf586db72fdeed7db.mesh"]
+
+source_file="res://Drive_Bg/Models/Buildings OBJ format/wall_doorA.obj"
+dest_files=["res://.godot/imported/wall_doorA.obj-c6248d9dc5e8d2ecf586db72fdeed7db.mesh", "res://.godot/imported/wall_doorA.obj-c6248d9dc5e8d2ecf586db72fdeed7db.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

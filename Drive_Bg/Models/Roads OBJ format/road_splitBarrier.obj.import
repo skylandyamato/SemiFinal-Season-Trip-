@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cb6vo1qqivk4t"
+path="res://.godot/imported/road_splitBarrier.obj-a152d1ffaa6c306109081cdcc9bff475.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_splitBarrier.obj-a152d1ffaa6c306109081cdcc9bff475.mesh"]
+
+source_file="res://Drive_Bg/Models/Roads OBJ format/road_splitBarrier.obj"
+dest_files=["res://.godot/imported/road_splitBarrier.obj-a152d1ffaa6c306109081cdcc9bff475.mesh", "res://.godot/imported/road_splitBarrier.obj-a152d1ffaa6c306109081cdcc9bff475.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

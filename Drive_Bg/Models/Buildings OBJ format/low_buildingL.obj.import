@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bp7nksq3e3hc2"
+path="res://.godot/imported/low_buildingL.obj-5afd166af39d0e4c93d5520e975ded44.mesh"
+
+[deps]
+
+files=["res://.godot/imported/low_buildingL.obj-5afd166af39d0e4c93d5520e975ded44.mesh"]
+
+source_file="res://Drive_Bg/Models/Buildings OBJ format/low_buildingL.obj"
+dest_files=["res://.godot/imported/low_buildingL.obj-5afd166af39d0e4c93d5520e975ded44.mesh", "res://.godot/imported/low_buildingL.obj-5afd166af39d0e4c93d5520e975ded44.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

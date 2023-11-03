@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://g4km2wgf5wr2"
+path="res://.godot/imported/road_crossing.obj-989d4f8f52c7eeb91718444bd426d1c1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_crossing.obj-989d4f8f52c7eeb91718444bd426d1c1.mesh"]
+
+source_file="res://Drive_Bg/Models/Roads OBJ format/road_crossing.obj"
+dest_files=["res://.godot/imported/road_crossing.obj-989d4f8f52c7eeb91718444bd426d1c1.mesh", "res://.godot/imported/road_crossing.obj-989d4f8f52c7eeb91718444bd426d1c1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

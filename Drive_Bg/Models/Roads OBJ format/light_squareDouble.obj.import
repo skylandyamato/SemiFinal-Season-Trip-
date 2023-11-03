@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d35nmaha7ctv4"
+path="res://.godot/imported/light_squareDouble.obj-622c6dde004a2de575737bed9bed4148.mesh"
+
+[deps]
+
+files=["res://.godot/imported/light_squareDouble.obj-622c6dde004a2de575737bed9bed4148.mesh"]
+
+source_file="res://Drive_Bg/Models/Roads OBJ format/light_squareDouble.obj"
+dest_files=["res://.godot/imported/light_squareDouble.obj-622c6dde004a2de575737bed9bed4148.mesh", "res://.godot/imported/light_squareDouble.obj-622c6dde004a2de575737bed9bed4148.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

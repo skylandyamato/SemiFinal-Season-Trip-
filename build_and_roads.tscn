@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4xh1pqqrsje6"]
+
+[ext_resource type="MeshLibrary" uid="uid://d3dmh8yvjgt4i" path="res://Drive_Bg/Meshlibrary/Buildings.tres" id="1_3dg37"]
+[ext_resource type="MeshLibrary" uid="uid://b1a36nlbes8jm" path="res://Drive_Bg/Meshlibrary/Roads.tres" id="2_ccocv"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7nhkv"]
+
+[sub_resource type="Sky" id="Sky_dobpe"]
+sky_material = SubResource("ProceduralSkyMaterial_7nhkv")
+
+[sub_resource type="Environment" id="Environment_keyda"]
+background_mode = 2
+background_energy_multiplier = 1.32
+sky = SubResource("Sky_dobpe")
+
+[node name="build and roads" type="Node3D"]
+
+[node name="Sky" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_keyda")
+
+[node name="buildings" type="GridMap" parent="Sky"]
+mesh_library = ExtResource("1_3dg37")
+cell_size = Vector3(1, 1, 1)
+cell_scale = 6.0
+
+[node name="Roads" type="GridMap" parent="Sky/buildings"]
+mesh_library = ExtResource("2_ccocv")
+cell_size = Vector3(1, 1, 1)
+cell_scale = 6.0

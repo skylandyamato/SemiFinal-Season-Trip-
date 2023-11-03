@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bkmk7t3sl236o"
+path="res://.godot/imported/detail_overhangWide.obj-b156d5f9dab25d0ae5b0521eb42ad409.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detail_overhangWide.obj-b156d5f9dab25d0ae5b0521eb42ad409.mesh"]
+
+source_file="res://Drive_Bg/Models/Buildings OBJ format/detail_overhangWide.obj"
+dest_files=["res://.godot/imported/detail_overhangWide.obj-b156d5f9dab25d0ae5b0521eb42ad409.mesh", "res://.godot/imported/detail_overhangWide.obj-b156d5f9dab25d0ae5b0521eb42ad409.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

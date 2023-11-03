@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c21qe45rvmuov"
+path="res://.godot/imported/detail_umbrella.obj-701f8017b18938f46c21de4095eedde2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detail_umbrella.obj-701f8017b18938f46c21de4095eedde2.mesh"]
+
+source_file="res://Drive_Bg/Models/Buildings OBJ format/detail_umbrella.obj"
+dest_files=["res://.godot/imported/detail_umbrella.obj-701f8017b18938f46c21de4095eedde2.mesh", "res://.godot/imported/detail_umbrella.obj-701f8017b18938f46c21de4095eedde2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

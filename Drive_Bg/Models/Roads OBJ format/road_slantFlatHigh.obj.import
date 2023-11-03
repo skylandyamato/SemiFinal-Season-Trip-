@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b6hqc5ebvjg08"
+path="res://.godot/imported/road_slantFlatHigh.obj-ac7a2bd49b65a36790a4444261d3373e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_slantFlatHigh.obj-ac7a2bd49b65a36790a4444261d3373e.mesh"]
+
+source_file="res://Drive_Bg/Models/Roads OBJ format/road_slantFlatHigh.obj"
+dest_files=["res://.godot/imported/road_slantFlatHigh.obj-ac7a2bd49b65a36790a4444261d3373e.mesh", "res://.godot/imported/road_slantFlatHigh.obj-ac7a2bd49b65a36790a4444261d3373e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

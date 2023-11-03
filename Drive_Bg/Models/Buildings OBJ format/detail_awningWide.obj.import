@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c0cpvog7ocxk6"
+path="res://.godot/imported/detail_awningWide.obj-1c8a7dc2bf5b94e4b8c8fd5133f6ae44.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detail_awningWide.obj-1c8a7dc2bf5b94e4b8c8fd5133f6ae44.mesh"]
+
+source_file="res://Drive_Bg/Models/Buildings OBJ format/detail_awningWide.obj"
+dest_files=["res://.godot/imported/detail_awningWide.obj-1c8a7dc2bf5b94e4b8c8fd5133f6ae44.mesh", "res://.godot/imported/detail_awningWide.obj-1c8a7dc2bf5b94e4b8c8fd5133f6ae44.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

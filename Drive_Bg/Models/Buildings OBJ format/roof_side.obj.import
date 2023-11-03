@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cq0av450ob56f"
+path="res://.godot/imported/roof_side.obj-cf070ffcdcd13d50959c07633839437a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roof_side.obj-cf070ffcdcd13d50959c07633839437a.mesh"]
+
+source_file="res://Drive_Bg/Models/Buildings OBJ format/roof_side.obj"
+dest_files=["res://.godot/imported/roof_side.obj-cf070ffcdcd13d50959c07633839437a.mesh", "res://.godot/imported/roof_side.obj-cf070ffcdcd13d50959c07633839437a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
