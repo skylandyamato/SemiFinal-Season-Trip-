@@ -551,7 +551,7 @@ mesh = SubResource("ArrayMesh_ktdik")
 skeleton = NodePath("")
 
 [node name="car_01_Cube_004" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.97756, -0.193199, -0.0839777, -0.193621, 0.981071, -0.00318191, 0.0830032, 0.0131494, -0.996461, 21.805, -154.191, 0.519342)
+transform = Transform3D(-0.97756, -0.193199, -0.0839777, -0.193621, 0.981071, -0.00318192, 0.0830032, 0.0131494, -0.996461, 21.805, -154.191, 0.519342)
 gi_mode = 2
 mesh = SubResource("ArrayMesh_sixo1")
 skeleton = NodePath("")

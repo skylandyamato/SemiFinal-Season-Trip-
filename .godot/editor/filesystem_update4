@@ -1,3 +1,11 @@
+res://main_menu/main_menu.tscn
 res://Drive_Bg/Meshlibrary/Buildings.tres
 res://Drive_Bg/Meshlibrary/Roads.tres
+res://main_game/main_game.tscn
+res://road_generator.tscn
+res://road_tiles/road_intersect_0.tscn
+res://road_tiles/road_lturn_0.tscn
+res://road_tiles/road_rturn_0.tscn
+res://main_game/car_move.tscn
+res://road_tiles/road_straight_0.tscn
 res://build_and_roads.tscn

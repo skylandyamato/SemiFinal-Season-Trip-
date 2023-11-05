@@ -1,39 +1,58 @@
-[gd_scene load_steps=10 format=3 uid="uid://ddc5gpxod2j4"]
+[gd_scene load_steps=12 format=3 uid="uid://ddc5gpxod2j4"]
 
 [ext_resource type="Script" path="res://main_game/World.gd" id="1_7axet"]
+[ext_resource type="MeshLibrary" uid="uid://d3dmh8yvjgt4i" path="res://Drive_Bg/Meshlibrary/Buildings.tres" id="2_60d1p"]
+[ext_resource type="MeshLibrary" uid="uid://b1a36nlbes8jm" path="res://Drive_Bg/Meshlibrary/Roads.tres" id="2_yc70w"]
 [ext_resource type="PackedScene" uid="uid://c8hx5t3o022ng" path="res://road_generator.tscn" id="2_yho0j"]
 [ext_resource type="Script" path="res://main_game/Control.gd" id="4_d8ave"]
 [ext_resource type="FontFile" uid="uid://fjgdn06ebj4c" path="res://CarLock-lawX.ttf" id="5_harwm"]
 [ext_resource type="PackedScene" uid="uid://djxwuwtpo3teh" path="res://main_game/car_move.tscn" id="5_uy6u3"]
 [ext_resource type="Script" path="res://main_game/HeartPy.gd" id="6_8v0n0"]
 
-[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_yulgn"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_eqtf7"]
 
-[sub_resource type="Sky" id="Sky_wr544"]
-sky_material = SubResource("PhysicalSkyMaterial_yulgn")
+[sub_resource type="Sky" id="Sky_n6c4v"]
+sky_material = SubResource("ProceduralSkyMaterial_eqtf7")
 
-[sub_resource type="Environment" id="Environment_sjway"]
+[sub_resource type="Environment" id="Environment_swmfc"]
 background_mode = 2
-background_energy_multiplier = 2.09
-sky = SubResource("Sky_wr544")
-ambient_light_source = 3
-ambient_light_color = Color(0.423529, 0.698039, 0.941176, 1)
+sky = SubResource("Sky_n6c4v")
 
 [node name="MainGame" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.473111, 0.907378, -0.306388)
 script = ExtResource("1_7axet")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_sjway")
+[node name="Sky" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_swmfc")
+
+[node name="Roads" type="GridMap" parent="Sky"]
+mesh_library = ExtResource("2_yc70w")
+cell_octant_size = 10
+cell_scale = 650.0
+data = {
+"cells": PackedInt32Array(65558, 65465, 1048636, 65558, 65142, 1048636, 65557, 64817, 1048636, 65556, 64493, 1441852, 65558, 64170, 1441813, 65882, 64170, 655420, 130772, 64169, 655420, 65558, 63845, 1048636, 130772, 64474, 1048640, 130773, 64791, 1048640, 130774, 65117, 1048640, 130773, 65442, 1048640, 65880, 64475, 1048640, 65880, 64791, 1048640, 65880, 65116, 1048640, 65878, 65440, 1048640, 65559, 63521, 1048589, 65882, 63520, 17, 66191, 63519, 655420, 65877, 63845, 655424, 66200, 64170, 655420, 66194, 63844, 655424, 130771, 63846, 1441856, 130773, 63523, 1441856, 130775, 63200, 1441856, 65564, 63198, 1441856, 130455, 63850, 1441856, 130453, 63527, 1441856, 130448, 63201, 1441856, 130135, 63852, 1441856, 130137, 63529, 1441856, 130139, 63203, 1441856, 66525, 64170, 14, 66231, 64494, 1441856, 66233, 64814, 1441856, 66086, 64841, 1441856, 66088, 64840, 1441856, 66090, 64839, 1441856, 66526, 64493, 1441837, 66528, 64810, 1441833, 66527, 65122, 1441833, 66527, 65446, 1441835, 66206, 65136, 1441856, 66202, 65430, 1441856, 65873, 65464, 1441856, 66198, 65461, 1441856, 130767, 65466, 1441856)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="Buildings" type="GridMap" parent="Sky/Roads"]
+mesh_library = ExtResource("2_60d1p")
+cell_scale = 700.0
+data = {
+"cells": PackedInt32Array(65179, 64527, 1441838, 65178, 64819, 1441834, 65176, 65229, 1441831, 358, 65154, 1048587, 414, 64530, 1048611, 330, 63857, 7, 634, 63864, 44, 64929, 63623, 6, 64925, 63913, 0, 65402, 63266, 1048617, 65403, 62986, 1048617, 65404, 62707, 1048617)
+}
+
+[node name="Lights and Py" type="GridMap" parent="Sky/Roads/Buildings"]
+mesh_library = ExtResource("2_yc70w")
+cell_scale = 650.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.518971, 330.308, 0)
+transform = Transform3D(1, 0, 0, 0, 0.502009, 0.864863, 0, -0.864863, 0.502009, 0.518971, 329.202, 13.6121)
 
 [node name="road_generator" parent="." instance=ExtResource("2_yho0j")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
 
 [node name="Car" parent="." instance=ExtResource("5_uy6u3")]
-transform = Transform3D(-0.00897098, -1.02446e-08, 0.99996, -0.45156, 0.892232, -0.00405109, -0.892195, -0.451579, -0.0080042, 0, 25.5216, -11.0601)
+transform = Transform3D(-0.00897098, -1.02737e-08, 0.99996, -0.290406, 0.956901, -0.00260532, -0.956861, -0.290419, -0.00858434, -96.505, 159.354, 17.1378)
 inertia = Vector3(363.64, 261.36, 420.45)
 
 [node name="Control" type="Control" parent="."]
